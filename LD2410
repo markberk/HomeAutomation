@@ -1,0 +1,14 @@
+- platform: gpio
+    pin:
+      number: 33
+      mode:
+        input: true
+        output: false
+        pullup: true
+      inverted: false
+    name: Gang
+    device_class: occupancy
+    filters:
+    - delayed_on: 5ms
+    - delayed_off: 1000ms
+    disabled_by_default: false
